@@ -1,6 +1,6 @@
 self.addEventListener("push", (e) => {
   console.log("e :>> ", e.data.text());
-  /*const config = {
+  const config = {
     body: e.data.text() || "Yeni Makaleye Gözatın!!",
     data: {
       dateOfArrival: Date.now(),
@@ -20,14 +20,6 @@ self.addEventListener("push", (e) => {
         // icon:
       },
     ],
-  };*/
-  const config = {
-    body: e.data.text() || "Yeni Makaleye Gözatın!!",
-    data: {
-      dateOfArrival: Date.now(),
-      primaryKey: "3",
-    },
-
   };
   e.waitUntil(
     self.registration.showNotification("Yeni Makale Eklendi!!", config)
