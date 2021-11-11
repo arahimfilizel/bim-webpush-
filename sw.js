@@ -1,5 +1,5 @@
 self.addEventListener("push", (e) => {
-  //console.log("e :>> ", e.data.text());
+  console.log("e :>> ", e.data.text());
   /*const config = {
     body: e.data.text() || "Yeni Makaleye Gözatın!!",
     data: {
@@ -22,7 +22,7 @@ self.addEventListener("push", (e) => {
     ],
   };*/
   const config = {
-    body: "Yeni Makaleye Gözatın!!",
+    body: "içerik",
     data: {
       dateOfArrival: Date.now(),
       primaryKey: "3",
