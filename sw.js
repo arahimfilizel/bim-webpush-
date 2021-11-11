@@ -22,7 +22,7 @@ self.addEventListener("push", (e) => {
     ],
   };*/
   const config = {
-    body: "içerik",
+    body: e.data.text() || "Yeni Makaleye Gözatın!!",
     data: {
       dateOfArrival: Date.now(),
       primaryKey: "3",
